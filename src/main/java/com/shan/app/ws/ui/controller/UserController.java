@@ -23,10 +23,17 @@ public class UserController {
 	UserService userService;
 	
 	
-	@GetMapping
-	public String getUser() {
-		return "get user was called";
+	@GetMapping(path = "/{id}", produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
+	public UserRest getUser(/*@PathVariable*/ String id) {
+		UserRest returnValue = new UserRest();
+
+		UserDto userDto = userService.getUserByUserId(id);
+		//ModelMapper modelMapper = new ModelMapper();
+		//returnValue = modelMapper.map(userDto, UserRest.class);
+
+		return returnValue;
 	}
+	
 	@PostMapping
 	public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails) {
 		UserRest returnValue = new UserRest();

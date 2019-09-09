@@ -6,7 +6,7 @@ import java.util.Random;
 
 import org.springframework.stereotype.Service;
 
-import com.appsdeveloperblog.app.ws.security.SecurityConstants;
+import com.shan.app.ws.security.SecurityConstants;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
