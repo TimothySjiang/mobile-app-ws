@@ -87,11 +87,15 @@ public class UserController {
 		return returnValue;
 	}
 
-	@PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_XML_VALUE,
-			MediaType.APPLICATION_JSON_VALUE }, produces = { MediaType.APPLICATION_XML_VALUE,
-					MediaType.APPLICATION_JSON_VALUE })
+	@PutMapping(path = "/{id}", 
+			consumes = { 
+			MediaType.APPLICATION_XML_VALUE,
+			MediaType.APPLICATION_JSON_VALUE }, 
+			produces = { MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE })
 	@ApiImplicitParams({
-		@ApiImplicitParam(name="authorization", value="${userController.authorizationHeader.description}", paramType="header")
+	@ApiImplicitParam(name="authorization", 
+			value="${userController.authorizationHeader.description}", 
+			paramType="header")
 	})
 	public UserRest updateUser(@PathVariable String id, @RequestBody UserDetailsRequestModel userDetails) {
 		UserRest returnValue = new UserRest();
