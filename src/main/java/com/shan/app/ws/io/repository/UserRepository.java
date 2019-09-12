@@ -1,4 +1,4 @@
-package com.shan.app.ws.io.repositories;
+package com.shan.app.ws.io.repository;
 
 import java.util.List;
 
