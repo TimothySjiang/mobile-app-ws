@@ -1,3 +1,4 @@
+
 package com.shan.app.ws.ui.controller;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
